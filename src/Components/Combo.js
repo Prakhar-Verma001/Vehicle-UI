@@ -1,5 +1,6 @@
 import React from 'react'
 import { Box, Stack, Typography } from '@mui/material'
+import { Navigate } from 'react-router-dom'
 import Nav from './Nav'
 import VechicleList from './VechicleList'
 // import Table3 from './Table3'
@@ -18,6 +19,7 @@ const Combo = () => {
                 </Typography>
 
                 <VechicleList />
+                <Navigate to="vehicle" />
                 {/* <Table1 />
                 <VechicleList />
                 <Table2 />
