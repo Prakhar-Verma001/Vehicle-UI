@@ -34,8 +34,9 @@ const Table4 = () => {
   return (
     <>
         <Box bgcolor={'#F2FFE9'}>
-            <Stack direction={'row'} justifyContent={'end'} spacing={2} px={2}>
-               <Button sx={{bgcolor:'#0155A5', borderRadius:5, color:'white', py:1, px: 3,
+            <Stack direction={'row'} justifyContent={'end'} spacing={1.5} px={2}>
+
+               <Button sx={{bgcolor:'#0155A5', borderRadius:5, color:'white', py:1, px: {md:3, xs:2},
                textTransform:'none',   '&:hover': {
                    bgcolor:'#0766AD'                
                  }}}>
@@ -44,6 +45,7 @@ const Table4 = () => {
                        <Typography variant='body1'>Add</Typography>
                    </Stack>
                </Button>
+
                <Button sx={{bgcolor:'#0155A5', borderRadius:5, color:'white', py:1, px: 3,
                textTransform:'none',   '&:hover': {
                    bgcolor:'#0766AD'                
@@ -53,6 +55,7 @@ const Table4 = () => {
                        <Typography variant='body1'>Apply Filter</Typography>
                    </Stack>
                </Button>
+
             </Stack>
 
             <Box px={2}>
