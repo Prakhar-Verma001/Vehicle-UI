@@ -13,8 +13,8 @@ const VechicleList = () => {
 
   return (
     <>
-               <Box>
-                   <Grid container columns={8}>
+               <Box px={1}>
+                   <Grid container columns={8} rowGap={1.2} mb={1}>
                        <VechicleCard
                        to='vehicle'
                       //  num = '1'
@@ -73,25 +73,29 @@ const VechicleCard = (props) => {
 
   return (
     <>
-        <Grid item lg={2} md={4} xs={8} p={2}>
-          <Link to={props.to} underline='none'>
+        <Grid item lg={2} md={4} xs={8} px={1}>
+          <Link to={props.to} underline='none' sx={{p:0, borderRadius:5}}>
             <Button sx={{p:0, textTransform:'none', width:1, borderRadius:5}}>
-                <Card sx={{borderRadius:5, p:2, width:1, color:'white',
+                <Card sx={{borderRadius:5, p:1.5, width:1, color:'white',
                   bgcolor: 'white',
                   // flag ? "white" : "#0155A5"
                   '&:hover': {
                     bgcolor:'#0155A5'
-                  } 
+                  } ,
+                  height:'100%'
                 }}>
-                    <Stack direction={'row'} spacing={2}>
-                        <img src={props.src} alt={props.alt} style={{zIndex:2}} />
-                        <Stack direction={'column'} textAlign={'start'}>
-                            <Typography variant="h5" color={'#464255'} fontWeight={600}>
-                                {props.h1}
-                            </Typography>
-                            <Typography color={'#464255'} fontWeight={400}>
-                                {props.p1}
-                            </Typography>
+                    <Stack direction={'row'} spacing={1.3}>
+                          <img src={props.src} alt={props.alt} style={{zIndex:2}} />
+                       
+                        <Stack direction={'column'} textAlign={'start'} justifyContent={'space-between'}>
+                            <Box>
+                              <Typography variant="h5" fontSize={'1.3rem'} color={'#464255'} fontWeight={600} sx={{mb:'4px'}}>
+                                  {props.h1}
+                              </Typography>
+                              <Typography color={'#464255'} fontSize={'0.9rem'} fontWeight={500} lineHeight={1.1}>
+                                  {props.p1}
+                              </Typography>
+                            </Box>
                             <Typography fontSize={'0.8rem'} color={'#A3A3A3'} fontWeight={400}>
                                 {props.p2}
                             </Typography>
