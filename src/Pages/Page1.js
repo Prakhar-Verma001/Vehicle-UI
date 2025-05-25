@@ -2,6 +2,7 @@ import React from 'react'
 import { Grid } from '@mui/material'
 import SideVehicle from '../Components/SideVehicle'
 import Combo from '../Components/Combo'
+import { Footer } from '../Components/Footer'
 
 const Page1 = () => {
   return (
@@ -14,6 +15,7 @@ const Page1 = () => {
                 <Combo />
             </Grid>
         </Grid>
+        <Footer />
     </>
   )
 }
